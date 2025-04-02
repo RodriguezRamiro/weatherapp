@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="theme-toggle">
+        <label>Dark Mode</label>
+        <input type="checkbox" id="themeToggle" onchange="toggleTheme()">
+    </div>
+
+    <div class="app">
+        <h1>Weather App</h1>
+        <input type="text" id="cityInput" placeholder="Enter city name">
+        <button onclick="getWeather()">Get Weather</button>
+        <div id="weatherDisplay"></div>
+        <div class="spinner" id="spinner"></div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
