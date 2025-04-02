@@ -167,4 +167,14 @@ function toggleTheme() {
     document.body.classList.toggle('dark');
     const isDarkMode = document.body.classList.contains('dark');
     localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+    document.getElementById('themeToggle').checked = isDarkMode;
 }
+
+// Apply saved theme on page load
+document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark');
+        document.getElementById('themeToggle').checked = true;
+    }
+});
